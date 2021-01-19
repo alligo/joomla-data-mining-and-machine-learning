@@ -14,13 +14,13 @@
 
 SELECT
 	`user`.`id` AS `user_id`,
-	`user`.`name` AS `user_id`,
-	`user`.`username` AS `user_id`,
-	`user`.`email` AS `user_id`,
-	`user`.`block` AS `user_id`,
-	`user`.`sendEmail` AS `user_id`,
-	`user`.`registerDate` AS `user_id`,
-	`user`.`lastvisitDate` AS `user_id`,
+	`user`.`name` AS `user_name`,
+	`user`.`username` AS `user_username`,
+	`user`.`email` AS `user_email`,
+	`user`.`block` AS `user_block`,
+	`user`.`sendEmail` AS `user_sendEmail`,
+	`user`.`registerDate` AS `user_registerDate`,
+	`user`.`lastvisitDate` AS `user_lastvisitDate`,
 	`user`.`activation` AS `user_activation`
 FROM
 	`pg2016_users` AS `user`
