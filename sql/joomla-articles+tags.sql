@@ -34,7 +34,8 @@ SELECT
 	`content`.`modified` AS `content_modified_date`,
 	`content`.`hits` AS `content_hits`,
 	-- , `content`.`featured` AS `content_featured`
-	`content`.`title` AS `content_title`
+	-- , `content`.`title` AS `content_title`
+	`content`.`alias` AS `content_alias`
 	-- , `content`.`alias` AS `content_alias`
 	-- , `content`.`introtext` AS `content_introtext`
 	-- , `content`.`fulltext` AS `content_fulltext`
