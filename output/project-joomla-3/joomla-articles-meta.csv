@@ -1,0 +1,68 @@
+"content_id","content_state","category_id","category_path","content_created_by_user_id","content_created_by_user_username","content_modified_by_user_id","content_created_by_alias","content_created_date","content_modified_date","content_hits","content_title"
+1,1,21,sample-data-articles/joomla/extensions/components,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Administrator Components
+2,1,64,sample-data-articles/joomla/extensions/modules/articles-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Archive Module
+3,1,64,sample-data-articles/joomla/extensions/modules/articles-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Article Categories Module
+4,1,64,sample-data-articles/joomla/extensions/modules/articles-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Articles Category Module
+5,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Authentication
+6,1,26,sample-data-articles/park-site,750,joomleiro,750,Joomla,2021-01-20 23:01:04,2021-01-20 23:01:04,14,Australian Parks 
+7,1,66,sample-data-articles/joomla/extensions/modules/display-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Banner Module
+8,1,19,sample-data-articles/joomla,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,1,Beginners
+9,1,21,sample-data-articles/joomla/extensions/components,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Contacts
+10,1,21,sample-data-articles/joomla/extensions/components,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,2,Content
+11,1,73,sample-data-articles/park-site/photo-gallery/scenery,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Cradle Mountain
+12,1,66,sample-data-articles/joomla/extensions/modules/display-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Custom Module
+13,1,29,sample-data-articles/fruit-shop-site,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,3,Directions
+14,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Editors
+15,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Editors-xtd
+16,1,66,sample-data-articles/joomla/extensions/modules/display-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Feed Display
+17,1,27,sample-data-articles/park-site/park-blog,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,1,First Blog Post
+18,1,27,sample-data-articles/park-site/park-blog,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,2,Second Blog Post
+19,1,66,sample-data-articles/joomla/extensions/modules/display-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Footer Module
+20,1,29,sample-data-articles/fruit-shop-site,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,10,Fruit Shop
+21,1,19,sample-data-articles/joomla,750,joomleiro,750,Joomla,2021-01-20 23:01:04,2021-01-20 23:01:04,2,Getting Help
+22,1,19,sample-data-articles/joomla,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,1,Getting Started
+23,1,30,sample-data-articles/fruit-shop-site/growers,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Happy Orange Orchard
+24,1,19,sample-data-articles/joomla,750,joomleiro,750,Joomla,2021-01-20 23:01:04,2021-01-20 23:01:04,0,Joomla!
+25,1,72,sample-data-articles/park-site/photo-gallery/animals,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Koala
+26,1,67,sample-data-articles/joomla/extensions/modules/utility-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Language Switcher
+27,1,64,sample-data-articles/joomla/extensions/modules/articles-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Latest Articles Module
+28,1,65,sample-data-articles/joomla/extensions/modules/user-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Login Module
+29,1,75,sample-data-articles/joomla/extensions/modules/navigation-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Menu Module
+30,1,64,sample-data-articles/joomla/extensions/modules/articles-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Most Read Content
+31,1,64,sample-data-articles/joomla/extensions/modules/articles-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,News Flash
+32,1,19,sample-data-articles/joomla,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,1,Options
+33,1,72,sample-data-articles/park-site/photo-gallery/animals,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Phyllopteryx
+34,1,73,sample-data-articles/park-site/photo-gallery/scenery,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Pinnacles
+35,1,19,sample-data-articles/joomla,750,joomleiro,750,Joomla,2021-01-20 23:01:04,2021-01-20 23:01:04,2,Professionals
+36,1,66,sample-data-articles/joomla/extensions/modules/display-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Random Image Module
+37,1,64,sample-data-articles/joomla/extensions/modules/articles-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Related Items Module
+38,1,19,sample-data-articles/joomla,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,14,Sample Sites
+39,1,21,sample-data-articles/joomla/extensions/components,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Search
+40,1,67,sample-data-articles/joomla/extensions/modules/utility-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Search Module
+41,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Search 
+42,1,14,sample-data-articles,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,3,Site Map
+43,1,72,sample-data-articles/park-site/photo-gallery/animals,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Spotted Quoll
+44,1,67,sample-data-articles/joomla/extensions/modules/utility-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Statistics Module
+45,1,67,sample-data-articles/joomla/extensions/modules/utility-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Syndicate Module
+46,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,System
+47,1,19,sample-data-articles/joomla,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,1,The Joomla! Community
+48,1,19,sample-data-articles/joomla,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,2,The Joomla! Project
+49,1,23,sample-data-articles/joomla/extensions/templates,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,8,Typography
+50,1,19,sample-data-articles/joomla,750,joomleiro,750,Joomla,2021-01-20 23:01:04,2021-01-20 23:01:04,2,Upgraders
+51,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,User
+52,1,21,sample-data-articles/joomla/extensions/components,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Users
+53,1,19,sample-data-articles/joomla,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,5,Using Joomla!
+56,1,65,sample-data-articles/joomla/extensions/modules/user-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Who's Online
+57,1,72,sample-data-articles/park-site/photo-gallery/animals,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Wobbegone
+58,1,30,sample-data-articles/fruit-shop-site/growers,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Wonderful Watermelon
+59,1,67,sample-data-articles/joomla/extensions/modules/utility-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Wrapper Module
+60,1,21,sample-data-articles/joomla/extensions/components,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,News Feeds
+61,1,75,sample-data-articles/joomla/extensions/modules/navigation-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Breadcrumbs Module
+62,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Content
+64,1,73,sample-data-articles/park-site/photo-gallery/scenery,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Blue Mountain Rain Forest
+65,1,73,sample-data-articles/park-site/photo-gallery/scenery,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Ormiston Pound
+66,1,65,sample-data-articles/joomla/extensions/modules/user-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Latest Users Module
+67,2,9,uncategorised,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,What's New in 1.5?
+68,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Captcha
+69,1,25,sample-data-articles/joomla/extensions/plugins,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Quick Icons
+70,1,67,sample-data-articles/joomla/extensions/modules/utility-modules,750,joomleiro,0,Joomla,2021-01-20 23:01:04,,0,Smart Search

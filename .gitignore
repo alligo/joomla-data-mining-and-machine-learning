@@ -3,3 +3,9 @@ sql/*
 !sql/joomla-articles+tags.sql
 !sql/joomla-tags.sql
 !sql/joomla-users.sql
+
+output/*
+!output/README.md
+!output/project-joomla-3/
+!output/project-joomla-3/joomla-users.csv
+!output/project-joomla-4/
