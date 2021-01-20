@@ -3,7 +3,7 @@
 -- ID:             joomla-tags
 -- DESCRIPTION:    Return basic generic information about tags
 --
--- USAGE:          Replace '#__' with the prefix table if this query is used
+-- USAGE:          Replace 'JOSTABLEPREFIX_' with the prefix table if this query is used
 --                 outside Joomla framework (like direct from typical SQL
 --                 frontends like PHPMyAdmin or data mining tools)
 --
@@ -31,10 +31,10 @@ SELECT
 	`tag`.`modified_time` AS `tag_modified_time`,
 	COUNT(`content`.`id`) AS `content_count`
 FROM
-	`pg2016_tags` AS `tag`
-LEFT JOIN `pg2016_contentitem_tag_map` AS `contentitem_tag_map` ON
+	`JOSTABLEPREFIX_tags` AS `tag`
+LEFT JOIN `JOSTABLEPREFIX_contentitem_tag_map` AS `contentitem_tag_map` ON
     `contentitem_tag_map`.`type_alias` = "com_content.article" 
     AND `contentitem_tag_map`.`tag_id` = `tag`.`id`
-LEFT JOIN `pg2016_content` AS `content` ON
+LEFT JOIN `JOSTABLEPREFIX_content` AS `content` ON
 	`contentitem_tag_map`.`content_item_id` = `content`.`id`
 GROUP BY `tag`.`id`

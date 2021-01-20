@@ -5,7 +5,7 @@
 --                 be duplicated. This can be used by tools to agregate other
 --                 data.
 -- 
--- USAGE:          Replace '#__' with the prefix table if this query is used
+-- USAGE:          Replace 'JOSTABLEPREFIX_' with the prefix table if this query is used
 --                 outside Joomla framework (like direct from typical SQL
 --                 frontends like PHPMyAdmin or data mining tools)
 -- 
@@ -42,17 +42,17 @@ SELECT
 	-- , `content`.`metadata` AS `content_metadata`
 	-- , `content`.`note` AS `content_note`
 FROM
-	`pg2016_content` AS `content`
-LEFT JOIN `pg2016_categories` AS `category` ON
+	`JOSTABLEPREFIX_content` AS `content`
+LEFT JOIN `JOSTABLEPREFIX_categories` AS `category` ON
 	`category`.`id` = `content`.`catid`
-LEFT JOIN `pg2016_users` AS `user_created` ON
+LEFT JOIN `JOSTABLEPREFIX_users` AS `user_created` ON
  	`user_created`.`id` = `content`.`created_by`
-LEFT JOIN `pg2016_users` AS `user_modified` ON
+LEFT JOIN `JOSTABLEPREFIX_users` AS `user_modified` ON
  	`user_modified`.`id` = `content`.`modified_by`
-LEFT JOIN `pg2016_contentitem_tag_map` AS `contentitem_tag_map` ON
+LEFT JOIN `JOSTABLEPREFIX_contentitem_tag_map` AS `contentitem_tag_map` ON
     `contentitem_tag_map`.`type_alias` = "com_content.article" 
     AND `contentitem_tag_map`.`content_item_id` = `content`.`id`
-LEFT JOIN `pg2016_tags` AS `tag` ON
+LEFT JOIN `JOSTABLEPREFIX_tags` AS `tag` ON
 	`contentitem_tag_map`.`tag_id` = `tag`.`id`
 
 GROUP BY `content`.`id`
