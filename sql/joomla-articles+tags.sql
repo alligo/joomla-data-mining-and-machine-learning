@@ -4,11 +4,7 @@
 --                 article, if have more than 1 tags, the entire line will
 --                 be duplicated. This can be used by tools to agregate other
 --                 data.
--- 
--- USAGE:          Replace 'JOSTABLEPREFIX_' with the prefix table if this query is used
---                 outside Joomla framework (like direct from typical SQL
---                 frontends like PHPMyAdmin or data mining tools)
--- 
+--
 -- AUTHOR:         Emerson Rocha <emerson[at]alligo.com.br>
 -- COMPANY:        Alligo
 -- LICENSE:        Public Domain
