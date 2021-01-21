@@ -1,18 +1,24 @@
-# Data Mining and Machine Learning references for Joomla! CMS v0.4
-**[Working draft] Joomla! Data Mining SQL Queries examples. Useful to
-extract data for analysis on external tools.**
+# Data Mining and Machine Learning references for Joomla! CMS [v0.4]
+<!-- **Joomla! Data Mining SQL Queries examples. Useful to extract data for analysis
+on external open source tools, including to build machine learning models.** -->
 
 The most common use case of this project is that your organization (or clients
 of your company) have one or more websites _SO BIG_ they help to understand how
-the content is organized and then how to generate more value. As this project
-also is focused for data mining / machine learning tools, you can benchmark
-popularity or outlines out of the box.
+the content is organized and then how to generate more value.
 
-> _**PROTIP**: While new people to both machine learning usage in the real
+> **PROTIP 1**: While new people to both machine learning and usage in the real
   world are likely to assume the value to deliver with data mining for large
   websites is forecasting and replicating success cases, **often the best value
   is discovering patterns already existing and fixing small issues with high
-  impact**._
+  impact**. In other words: you learn how humans produce/optimize content
+  (even if it means ask them instead of analize the data data), then discover
+  outliers that are not as perfect. The next step is, based on data
+  visualization, help the humans to self-improvement with new feedback.
+
+> **PROTIP 2**: if you're *really* into forecasting from the _PROTIP 1_,
+  **machine learning can (and often will) works better even with small (but well
+  representative) list of items (think like 100 rows)** than 1.000's to
+  100.000's but poorly prepared data.
 
 ---
 
@@ -34,6 +40,8 @@ popularity or outlines out of the box.
         - [3.2.2. Orange Data Miner](#322-orange-data-miner)
         - [3.2.3. Weka, "The workbench for machine learning"](#323-weka-the-workbench-for-machine-learning)
 - [4. Patterns often found on (large) websites to be aware](#4-patterns-often-found-on-large-websites-to-be-aware)
+    - [4.1 Spammers](#41-spammers)
+    - [4.2 Untagged items](#42-untagged-items)
 
 <!-- /TOC -->
 
@@ -51,8 +59,9 @@ popularity or outlines out of the box.
   the intersection of [machine learning](https://en.wikipedia.org/wiki/Machine_learning),
   [statistics](https://en.wikipedia.org/wiki/Statistics), and database systems.
 > - The **joomla-data-mining-and-machine-learning** gives an general idea of how
-    to do data mining and machine learning with sites based on Joomla! CMS, and
-    dedicate special attention to topics that are not generic to any website.
+    to do data mining and machine learning with websites, but dedicate special
+    attention to implementation of non-generic tasks, like SQL queries,
+    to an typical Joomla! CMS installation.
 
 **What this reference is NOT**:
 
@@ -61,10 +70,10 @@ popularity or outlines out of the box.
   - This project requires administrative access (like database access and server
     access logs).
 - **Do not mistake this project by something that you "install" on an site**
-    - Some people search for "Data mining WordPress" or "Data Mining Joomla"
-      asking for something to install and automatically "enable data mining"
-      "enable machine learning" on the website.
-    - Stricly speaking, yes, one discussed source of data, Google Analytics,
+    - Some people search for _"Data mining WordPress"_ or _"Data Mining Joomla"_
+      asking for something to install and automatically _"enable data mining"_
+      _"enable machine learning"_ on the website.
+    - Ok, **stricly speaking**, yes, one discussed source of data, Google Analytics,
       _can be installed_, but this project is have broader concept.
 - **Do not confuse this guide with something whose final result runs
   automatically and give insights.**
@@ -75,6 +84,7 @@ popularity or outlines out of the box.
         - _"Wow, Orange Data Mining discoreverd that `content_created_date` can
           predict `content_hits`"_ is the same as one machine discover that as
           older as one content is, more likely to have an total number of views.
+          But is this useful?
 
 ## 2. Data extraction, preparation and cleaning
 
@@ -193,8 +203,18 @@ significant content.
 
 ## 4. Patterns often found on (large) websites to be aware
 
-> _TODO: add content here..._
+> _TODO: this entire section is an working draft_
 
-# 4. License
+### 4.1 Spammers
+For sites that allow users to create accounts (even if there is no registration
+link on the site, but the CMS allows create accounts) the exported data will
+show trends of non-natural humans registered.
 
-To Be Added
+### 4.2 Untagged items
+
+> _TODO: add content_
+
+# License
+[MIT License](LICENSE.md).
+
+`SPDX-License-Identifier: MIT`
