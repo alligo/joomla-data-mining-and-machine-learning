@@ -1,4 +1,4 @@
-# Data Mining and Machine Learning references for Joomla! CMS v0.3
+# Data Mining and Machine Learning references for Joomla! CMS v0.4
 **[Working draft] Joomla! Data Mining SQL Queries examples. Useful to
 extract data for analysis on external tools.**
 
@@ -12,24 +12,27 @@ correction, you can benchmark popularity or outlines out of the box.
 
 <!-- TOC depthFrom:2 -->
 
-- [Overview](#overview)
-- [Data extraction, preparation and cleaning](#data-extraction-preparation-and-cleaning)
-    - [SQL queries](#sql-queries)
-        - [Output for the reference SQL queries](#output-for-the-reference-sql-queries)
-    - [Helper scripts](#helper-scripts)
-- [Data Mining and Machine learning ("understanding the data")](#data-mining-and-machine-learning-understanding-the-data)
-    - [Know limitations](#know-limitations)
-    - [Softwares](#softwares)
-        - [LibreOffice Calc / Microsoft Excel / Google Spreadsheet](#libreoffice-calc--microsoft-excel--google-spreadsheet)
-        - [Orange Data Miner](#orange-data-miner)
-        - [Weka, "The workbench for machine learning"](#weka-the-workbench-for-machine-learning)
-- [License](#license)
+- [1. Overview](#1-overview)
+- [2. Data extraction, preparation and cleaning](#2-data-extraction-preparation-and-cleaning)
+    - [2.1. Data extraction from the Joomla site database ("SQL queries")](#21-data-extraction-from-the-joomla-site-database-sql-queries)
+        - [2.1.1. Output for the reference SQL queries](#211-output-for-the-reference-sql-queries)
+    - [2.2. Data extraction from Joomla server logs ("Apache/NGinx access logs")](#22-data-extraction-from-joomla-server-logs-apachenginx-access-logs)
+    - [2.3. Data extraction from Google Analytics and Google Search Console](#23-data-extraction-from-google-analytics-and-google-search-console)
+        - [2.3.1. Google Analytics](#231-google-analytics)
+        - [2.3.2. Google Search Console](#232-google-search-console)
+    - [2.4. Helper scripts](#24-helper-scripts)
+- [3. Data Mining and Machine learning ("understanding the data")](#3-data-mining-and-machine-learning-understanding-the-data)
+    - [3.1. Know limitations](#31-know-limitations)
+    - [3.2. Softwares](#32-softwares)
+        - [3.2.1. LibreOffice Calc / Microsoft Excel / Google Spreadsheet](#321-libreoffice-calc--microsoft-excel--google-spreadsheet)
+        - [3.2.2. Orange Data Miner](#322-orange-data-miner)
+        - [3.2.3. Weka, "The workbench for machine learning"](#323-weka-the-workbench-for-machine-learning)
 
 <!-- /TOC -->
 
 ---
 
-## Overview
+## 1. Overview
 
 **TL;DR of Concepts**
 
@@ -40,22 +43,30 @@ correction, you can benchmark popularity or outlines out of the box.
   is a process of discovering patterns in large data sets involving methods at
   the intersection of [machine learning](https://en.wikipedia.org/wiki/Machine_learning),
   [statistics](https://en.wikipedia.org/wiki/Statistics), and database systems.
+> - The **joomla-data-mining-and-machine-learning** gives an general idea of how
+    to do data mining and machine learning with sites based on Joomla! CMS, and
+    dedicate special attention to topics that are not generic to any website.
 
-**What this project is not**:
+**What this reference is NOT**:
 
-- Do not mistake "data mining" with "web scraping". This project requires
-  administrative access (like database access and server access logs)
+- Do not mistake [Data mining](https://en.wikipedia.org/wiki/Data_mining) with
+  [web scraping](https://en.wikipedia.org/wiki/Web_scraping).
+  - This project requires administrative access (like database access and server
+    access logs).
 - Do not mistake this project by something that you "install" on the site
-  (like the very useful Google Analytics) or that is planned to run
-  automatically. This needs human intervention, as each project is unique. But
-  what it does, it's well tested and the more tedious and initially
-  time-consuming part.
+  (like the very useful Google Analytics)
+- Do not confuse this guide with something whose final result runs automatically
+  and give insights.
+    - While some parts can be automated and even individual softwares _can
+      bruteforce_ insights, an human would still need to glue different tools
+      and discard irrelevant or obvious conclusions and focus on what can be
+      useful
+      - _"Wow, Orange Data Mining discoreverd that `content_created_date` can
+        predict `content_hits`"_
 
-# joomla-data-mining-and-machine-learning
+## 2. Data extraction, preparation and cleaning
 
-## Data extraction, preparation and cleaning
-
-### SQL queries
+### 2.1. Data extraction from the Joomla site database ("SQL queries")
 - Directory: **[sql/](sql/)**
 - Database engine: **MySQL-like**
   - Replace 'JOSTABLEPREFIX_' with your real database prefix.
@@ -63,53 +74,89 @@ correction, you can benchmark popularity or outlines out of the box.
     need some small changes on syntax, but field names are granted to be
     compatible.
 
-#### Output for the reference SQL queries
+#### 2.1.1. Output for the reference SQL queries
 - Directory: **[output/](output/)**
 
 Each data mining project is unique, not just by project per organization, but
 by point in time. Yet this project contains examples of data output when
 using the implementation with the SQL queries.
 
-### Helper scripts
+### 2.2. Data extraction from Joomla server logs ("Apache/NGinx access logs")
+> Note: this section is a minimal draft. Since the implementation is more
+  generic than the use with Joomla CMS, it may not be implemented at all on
+  future releases. But it still mentioned here, since is an potential source
+  of data.
+
+### 2.3. Data extraction from Google Analytics and Google Search Console
+> Note: since this topic is generic than the use with only Joomla CMS
+  websites, it's here more as a quick reference. In fact, it would be incomplete
+  to at least not mention one source of data that is very likely to be already
+  used on average sites in production on a reference related to data mining
+  for Joomla.
+
+Both Google Analytics and Google Search Console can be used a source of data.
+While both (in special for very big sites with pages with low number of access)
+are likely to not be as structured to get an full picture, for the content they
+have, the 
+
+#### 2.3.1. Google Analytics
+
+**Export to Excel XLSX, CSV or Google Spreadsheet list of all URLs**
+
+1. Go to <https://analytics.google.com/>. Select the account of the website
+2. On the sidebar, click `Behavior` (in Portuguese, `Comportamento`)
+3. Click on `Site Content` (in Portuguese, `Conteúdo do site`)
+4. Click on `All Pages` (in Portuguese, `Todas as Páginas`)
+5. Change how many list items to show, 5000 is the maximum.
+    - Exported items are exactly the ones previewed on screen.
+6. (TODO: continue...)
+
+#### 2.3.2. Google Search Console
+
+### 2.4. Helper scripts
 
 At the moment the [bin/](bin/), even for an working draft, have no
 significant content.
 
-## Data Mining and Machine learning ("understanding the data")
+## 3. Data Mining and Machine learning ("understanding the data")
 > At the moment this section is an draft.
 
-### Know limitations
+### 3.1. Know limitations
 
-- The `content_hits` , `category_hits` and `tag_hits` (extracted with some of
-  the _SQL queries_) while very useful to get an overview without need to
-  relate with other sources (like Google Analytics and Apache/Nginx access
-  logs) is affected by caching mechanism (both standard Joomla Caching and
-  full page caches like Varnish). Do not ask to disable caches as this affects
-  performance, in special for big sites. But, as rule of trumb, when you confirm
-  that cache do affect these variables:
-  - The real value is equal or higher than expoted one (Often much higher)
-    - Pages with disproportionate number of access in short times will have
-      significantly less hits. (think articles that viralize)
-    - Pages with infrequent (but constant access over the same day or week) may
-      not be affected at all by cache.
-  - **The `content_hits` , `category_hits` and `tag_hits` still worth to be used
-    both for small benchmarks and (for serious reports) needs extra testing for
-    detect the impact**
+1. Data extraction from the Joomla site database ("SQL queries") fields named
+ `content_hits`, `category_hits` and `tag_hits`, while very useful to get an
+  overview without need to relate with other sources (like Google Analytics
+  and Apache/Nginx access logs) are affected by caching mechanisms (both standard
+  Joomla Caching and full page caches like Varnish). Do not ask to disable
+  caches as this affects performance, in particular for big sites. But, as rule
+  of trump, when you confirm that cache do affect these variables:
+    - The real value is equal or higher than exported one (sometimes much higher)
+        - Pages with disproportionate number of access in short times will have
+          significantly less hits. (think articles that viralize)
+        - Pages with infrequent (but constant access over the same day or week)
+          may not be affected at all by cache.
+    - **The `content_hits` , `category_hits` and `tag_hits` still worth to be
+      used both for small benchmarks and (for serious reports) needs extra
+      testing for detect the impact**
+2. Data from Google Analytics and Google Search Console **are limited to
+  page URls most accessed by users** and evolution over time (including URLs
+  changes)
+    - _(TODO: explain more on this)_
 
-### Softwares
+### 3.2. Softwares
 
-#### LibreOffice Calc / Microsoft Excel / Google Spreadsheet
+#### 3.2.1. LibreOffice Calc / Microsoft Excel / Google Spreadsheet
 
 - Site: <https://libreoffice.org/>
 - Site: <https://www.microsoft.com/microsoft-365/excel>
 - Site: <https://www.google.com/sheets/about/>
 
-#### Orange Data Miner
+#### 3.2.2. Orange Data Miner
 - Site: <https://orangedatamining.com/>
 
-#### Weka, "The workbench for machine learning"
+#### 3.2.3. Weka, "The workbench for machine learning"
 - Site: <https://www.cs.waikato.ac.nz/ml/weka/>
 
-## License
+# 4. License
 
 To Be Added
