@@ -1,4 +1,4 @@
-# joomla-data-mining-sql-queries v0.1-alpha
+# joomla-data-mining-sql-queries v0.2-alpha
 **[Working draft] Joomla! Data Mining SQL Queries examples. Useful to
 extract data for analysis on external tools**
 
@@ -9,6 +9,7 @@ extract data for analysis on external tools**
 - [Overview](#overview)
 - [Implementation](#implementation)
     - [SQL queries](#sql-queries)
+    - [Output](#output)
     - [Helper scripts](#helper-scripts)
 - [License](#license)
 
@@ -31,8 +32,19 @@ extract data for analysis on external tools**
 ## Implementation
 
 ### SQL queries
+- Directory: **[sql/](sql/)**
+- Database engine: **MySQL-like**
+  - Replace 'JOSTABLEPREFIX_' with your real database prefix.
+  - For Joomla CMS sites using _PostgreSQL_ or _SQL Server_/_SQL Azure_ you
+    need some small changes on syntax, but field names are granted to be
+    compatible.
 
-See [sql/](sql/) folder.
+### Output
+- Directory: **[output/](output/)**
+
+Each data mining project is unique, not just by project per organization, but
+by point in time. Yet this project contains examples of data output when
+using the implementation with the SQL queries.
 
 ### Helper scripts
 
