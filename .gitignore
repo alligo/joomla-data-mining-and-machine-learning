@@ -1,8 +1,11 @@
+database-dumps/*
+
 sql/*
 !sql/joomla-articles-meta.sql
 !sql/joomla-articles+tags.sql
 !sql/joomla-tags.sql
 !sql/joomla-users.sql
+
 
 output/*
 !output/README.md
