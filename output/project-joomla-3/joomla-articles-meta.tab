@@ -1,0 +1,72 @@
+content_state	category_path	content_created_by_user_username	content_modified_by_user_id	content_created_date	content_modified_date	content_hits	content_id	content_alias
+discrete	discrete	discrete	discrete	time	time	continuous	continuous	string
+						class	meta	meta
+1	sample-data-articles/joomla/extensions/components	technical-support	0	2011-01-01 00:00:01	?	0.0	1.0	administrator-components
+1	sample-data-articles/joomla/extensions/modules/articles-modules	technical-support	0	2011-01-01 00:00:01	?	1.0	2.0	archive-module
+1	sample-data-articles/joomla/extensions/modules/articles-modules	technical-support	0	2011-01-01 00:00:01	?	1.0	3.0	article-categories-module
+1	sample-data-articles/joomla/extensions/modules/articles-modules	technical-support	0	2011-01-01 00:00:01	?	7.0	4.0	articles-category-module
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	5.0	authentication
+1	sample-data-articles/park-site	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:51:04	1000.0	6.0	australian-parks
+1	sample-data-articles/joomla/extensions/modules/display-modules	technical-support	0	2011-01-01 00:00:01	?	3.0	7.0	banner-module
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	8.0	beginners
+1	sample-data-articles/joomla/extensions/components	technical-support	0	2011-01-01 00:00:01	?	0.0	9.0	contact
+1	sample-data-articles/joomla/extensions/components	technical-support	0	2011-01-01 00:00:01	?	1.0	10.0	content
+1	sample-data-articles/park-site/photo-gallery/scenery	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:50:33	1000.0	11.0	cradle-mountain
+1	sample-data-articles/joomla/extensions/modules/display-modules	technical-support	0	2011-01-01 00:00:01	?	0.0	12.0	custom-module
+1	sample-data-articles/fruit-shop-site	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:47:39	1000.0	13.0	directions
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	14.0	editors
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	15.0	editors-xtd
+1	sample-data-articles/joomla/extensions/modules/display-modules	technical-support	0	2011-01-01 00:00:01	?	2.0	16.0	feed-display
+1	sample-data-articles/park-site/park-blog	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:50:23	1000.0	17.0	first-blog-post
+1	sample-data-articles/park-site/park-blog	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:50:12	1000.0	18.0	second-blog-post
+1	sample-data-articles/joomla/extensions/modules/display-modules	technical-support	0	2011-01-01 00:00:01	?	1.0	19.0	footer-module
+1	sample-data-articles/fruit-shop-site	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:47:19	1000.0	20.0	fruit-shop
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	21.0	getting-help
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	22.0	getting-started
+1	sample-data-articles/fruit-shop-site/growers	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:47:02	1000.0	23.0	happy-orange-orchard
+1	sample-data-articles/joomla		716	2011-01-01 00:00:01	2013-10-15 14:57:20	97.0	24.0	joomla
+1	sample-data-articles/park-site/photo-gallery/animals	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:50:00	1000.0	25.0	koala
+1	sample-data-articles/joomla/extensions/modules/utility-modules	technical-support	0	2011-01-01 00:00:01	?	1.0	26.0	language-switcher
+1	sample-data-articles/joomla/extensions/modules/articles-modules	technical-support	0	2011-01-01 00:00:01	?	17.0	27.0	latest-articles-module
+1	sample-data-articles/joomla/extensions/modules/user-modules	technical-support	0	2011-01-01 00:00:01	?	7.0	28.0	login-module
+1	sample-data-articles/joomla/extensions/modules/navigation-modules	technical-support	0	2011-01-01 00:00:01	?	2.0	29.0	menu-module
+1	sample-data-articles/joomla/extensions/modules/articles-modules	technical-support	0	2011-01-01 00:00:01	?	7.0	30.0	most-read-content
+1	sample-data-articles/joomla/extensions/modules/articles-modules	technical-support	0	2011-01-01 00:00:01	?	16.0	31.0	news-flash
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	32.0	options
+1	sample-data-articles/park-site/photo-gallery/animals	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:49:45	1000.0	33.0	phyllopteryx
+1	sample-data-articles/park-site/photo-gallery/scenery	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:49:33	1000.0	34.0	pinnacles
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	35.0	professionals
+1	sample-data-articles/joomla/extensions/modules/display-modules	technical-support	0	2011-01-01 00:00:01	?	2.0	36.0	random-image-module
+1	sample-data-articles/joomla/extensions/modules/articles-modules	technical-support	0	2011-01-01 00:00:01	?	2.0	37.0	related-items-module
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	38.0	sample-sites
+1	sample-data-articles/joomla/extensions/components	technical-support	0	2011-01-01 00:00:01	?	0.0	39.0	search-component
+1	sample-data-articles/joomla/extensions/modules/utility-modules	technical-support	0	2011-01-01 00:00:01	?	1.0	40.0	search-module
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	41.0	search-plugin
+1	sample-data-articles	technical-support	0	2011-01-01 00:00:01	?	0.0	42.0	site-map
+1	sample-data-articles/park-site/photo-gallery/animals	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:49:21	1000.0	43.0	spotted-quoll
+1	sample-data-articles/joomla/extensions/modules/utility-modules	technical-support	0	2011-01-01 00:00:01	?	3.0	44.0	statistics
+1	sample-data-articles/joomla/extensions/modules/utility-modules	technical-support	0	2011-01-01 00:00:01	?	1.0	45.0	syndicate-module
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	46.0	system
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	47.0	the-joomla-community
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	48.0	the-joomla-project
+1	sample-data-articles/joomla/extensions/templates	technical-support	0	2011-01-01 00:00:01	?	0.0	49.0	typography
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	50.0	upgraders
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	51.0	user-plugins
+1	sample-data-articles/joomla/extensions/components	technical-support	0	2011-01-01 00:00:01	?	0.0	52.0	users-component
+1	sample-data-articles/joomla	technical-support	0	2011-01-01 00:00:01	?	0.0	53.0	using-joomla
+1	sample-data-articles/joomla/extensions/modules/user-modules	technical-support	0	2011-01-01 00:00:01	?	12.0	56.0	whos-online
+1	sample-data-articles/park-site/photo-gallery/animals	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:49:09	1000.0	57.0	wobbegone
+1	sample-data-articles/fruit-shop-site/growers	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:46:42	1000.0	58.0	wonderful-watermelon
+1	sample-data-articles/joomla/extensions/modules/utility-modules	technical-support	0	2011-01-01 00:00:01	?	0.0	59.0	wrapper-module
+1	sample-data-articles/joomla/extensions/components	technical-support	0	2011-01-01 00:00:01	?	1.0	60.0	news-feeds
+1	sample-data-articles/joomla/extensions/modules/navigation-modules	technical-support	0	2011-01-01 00:00:01	?	1.0	61.0	breadcrumbs-module
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	62.0	content-plugins
+1	sample-data-articles/park-site/photo-gallery/scenery	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:48:54	1000.0	64.0	blue-mountain-rain-forest
+1	sample-data-articles/park-site/photo-gallery/scenery	joomleira	592	2011-01-01 00:00:01	2021-01-21 23:48:41	1000.0	65.0	ormiston-pound
+1	sample-data-articles/joomla/extensions/modules/user-modules	technical-support	0	2011-01-01 00:00:01	?	0.0	66.0	latest-users-module
+2	uncategorised	technical-support	0	2011-01-01 00:00:01	?	0.0	67.0	whats-new-in-15
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	68.0	captcha
+1	sample-data-articles/joomla/extensions/plugins	technical-support	0	2011-01-01 00:00:01	?	0.0	69.0	quick-icons
+1	sample-data-articles/joomla/extensions/modules/utility-modules	technical-support	0	2011-01-01 00:00:01	?	0.0	70.0	smart-search
+1	sample-data-articles/joomla/extensions/modules/articles-modules		371	2013-10-31 00:14:17	2013-10-31 00:39:09	28.0	71.0	similar-tags
+1	sample-data-articles/joomla/extensions/modules/articles-modules		371	2013-10-31 00:43:46	2013-10-31 00:50:38	13.0	72.0	popular-tags

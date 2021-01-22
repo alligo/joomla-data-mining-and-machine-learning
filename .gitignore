@@ -1,5 +1,8 @@
 database-dumps/*
 
+*.ows
+*.swp*
+
 sql/*
 !sql/joomla-articles-meta.sql
 !sql/joomla-articles+tags.sql
