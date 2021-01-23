@@ -1,0 +1,9 @@
+"tag_id","tag_published","tag_parent_id","tag_lft","tag_rgt","tag_level","tag_path","tag_hits","tag_title","tag_alias","tag_note","tag_created_user_id","tag_created_time","tag_modified_user_id","tag_modified_time","content_count","tag_hits","content_hits"
+1,1,0,0,15,0,"",0,ROOT,root,"",0,2011-01-01 00:00:01,0,,0,0,
+2,1,1,1,2,1,red,3,Red,red,"",716,2013-10-15 14:52:40,0,,2,3,125
+3,1,1,3,4,1,yellow,6,Yellow,yellow,"",716,2013-10-15 14:52:53,0,,2,6,125
+4,1,1,5,8,1,green,1,Green,green,"",716,2013-10-15 14:53:14,0,,2,1,125
+5,1,4,6,7,2,green/lime,3,Lime,lime,"",716,2013-10-15 14:53:36,0,,1,3,97
+6,1,1,9,14,1,tags-de-teste,0,Tags De Teste,tags-de-teste,"",592,2021-01-21 23:43:51,0,2021-01-21 23:43:51,0,0,
+7,1,6,10,11,2,tags-de-teste/alpha,0,Alpha,alpha,"",592,2021-01-21 23:44:56,0,2021-01-21 23:44:56,15,0,15000
+8,1,6,12,13,2,tags-de-teste/omega,0,Omega,omega,"",592,2021-01-21 23:55:13,0,2021-01-21 23:55:13,52,0,227
