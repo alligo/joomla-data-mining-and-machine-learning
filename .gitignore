@@ -2,16 +2,16 @@ database-dumps/*
 
 *.ows
 *.swp*
+*.kf
+*.arff
 
 sql/*
-!sql/joomla-articles-meta.sql
-!sql/joomla-articles+tags.sql
-!sql/joomla-tags.sql
-!sql/joomla-users.sql
+!sql/tabledump
 
 
 output/*
 !output/README.md
 !output/project-joomla-3/
-!output/project-joomla-3/joomla-users.csv
+output/project-joomla-3/table-dump/
 !output/project-joomla-4/
+output/project-joomla-4/table-dump/
