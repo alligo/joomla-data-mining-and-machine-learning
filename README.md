@@ -20,6 +20,12 @@ the content is organized and then how to generate more value.
   representative) list of items (think like 100 rows)** than 1.000's to
   100.000's but poorly prepared data.
 
+<!--
+TODOs:
+
+- Orange tab format, http://orange.biolab.si/docs/latest/reference/rst/Orange.data.formats.html
+-->
+
 ---
 
 <!-- TOC depthFrom:2 -->

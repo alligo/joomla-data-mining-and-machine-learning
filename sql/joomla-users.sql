@@ -14,6 +14,10 @@
 --                                     user_modified_content_hits,
 --                                     user_created_content_hits
 
+-- @see https://teskalabs.com/blog/data-privacy-pseudonymization-anonymization-encryption
+-- @see https://towardsdatascience.com/anonymizing-data-sets-c4602e581a35
+-- @see https://www.w3resource.com/mysql/string-functions/mysql-left-function.php
+
 SELECT
     `user`.`id` AS `user_id`
     -- , `user`.`name` AS `user_name`

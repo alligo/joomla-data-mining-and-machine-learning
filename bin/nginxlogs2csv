@@ -1,0 +1,45 @@
+#!/bin/sh
+#===============================================================================
+#
+#          FILE:  nginxlogs2csv
+#
+#         USAGE:  nginxlogs2csv access.log access.log.csv
+#
+#   DESCRIPTION:  
+#
+#       OPTIONS:  ---
+#
+#  REQUIREMENTS:  ---
+#          BUGS:  ---
+#         NOTES:  ---
+#        AUTHOR:  Emerson Rocha <rocha[at]alligo.com.br>
+#       COMPANY:  Alligo
+#       LICENSE:  MIT
+#                 SPDX-License-Identifier: MIT
+#       VERSION:  v1.0.0
+#       CREATED:  2021-01-24 01:03 UTC
+#      REVISION:  ---
+#===============================================================================
+set -e
+
+#######################################
+# Show help
+# Globals:
+#   None
+# Arguments:
+#   None
+# Returns:
+#   None
+#######################################
+help() {
+  echo "Usage:
+  nginxlogs2csv /var/log/nginx/access.log
+  "
+  # nginxlogs2csv /var/log/nginx/access.log /tmp/access.log.csv
+}
+
+if [ -z "$1" ] || [ "$1" = "-h" ] || [ "$1" = "--help" ] ;
+then
+  help
+  exit 1
+fi
