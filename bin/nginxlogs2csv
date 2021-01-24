@@ -43,3 +43,17 @@ then
   help
   exit 1
 fi
+
+
+# @see http://nginx.org/en/docs/http/ngx_http_log_module.html
+# log_format compression '$remote_addr - $remote_user [$time_local] '
+#                        '"$request" $status $bytes_sent '
+#                        '"$http_referer" "$http_user_agent" "$gzip_ratio"';
+
+#tail "$1"
+# tail "$1" | awk '{print $1,$2}'
+# tail "$1" | awk '{print $1 " " $4 " " $5  " " $6 " "  $7}'
+
+
+echo "remote_addr,time_local,request,status,bytes_sent,http_referer,http_user_agent"
+tail "$1" | awk '{print $1 ","$4" " $5  "," $6 ","  $7}'

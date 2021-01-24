@@ -1,4 +1,5 @@
 database-dumps/*
+temp/*
 
 *.ows
 *.swp*
