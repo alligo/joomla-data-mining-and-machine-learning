@@ -22,6 +22,8 @@
 #===============================================================================
 
 # TODO: change documentation style, see https://realpython.com/documenting-python-code/ (fititnt, 2021-01-24 02:54 UTC)
+# @see https://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python
+# print("fatal error", file=sys.stderr)
 
 import sys, os, gzip, getopt, re
 
@@ -29,102 +31,137 @@ import sys, os, gzip, getopt, re
 # @see https://codereview.stackexchange.com/questions/238232/regex-for-nginx-log-parser
 # @see https://gist.github.com/hreeder/f1ffe1408d296ce0591d
 # @see https://www.programmersought.com/article/7703577076/
-lineformat = re.compile(r"""(?P<ipaddress>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - - \[(?P<dateandtime>\d{2}\/[a-z]{3}\/\d{4}:\d{2}:\d{2}:\d{2} (\+|\-)\d{4})\] ((\"(GET|POST) )(?P<url>.+)(http\/1\.1")) (?P<statuscode>\d{3}) (?P<bytessent>\d+) (?P<refferer>-|"([^"]+)") (["](?P<useragent>[^"]+)["])""", re.IGNORECASE)
+# lineformat = re.compile(r"""(?P<ipaddress>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - - \[(?P<dateandtime>\d{2}\/[a-z]{3}\/\d{4}:\d{2}:\d{2}:\d{2} (\+|\-)\d{4})\] ((\"(GET|POST) )(?P<url>.+)(http\/1\.1")) (?P<statuscode>\d{3}) (?P<bytessent>\d+) (?P<refferer>-|"([^"]+)") (["](?P<useragent>[^"]+)["])""", re.IGNORECASE)
+lineformat = re.compile(r"""
+   (?P<ipaddress>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+
+   -\s+
+   -\s+
+   \[(?P<dateandtime>\d{2}\/[a-z]{3}\/\d{4}:\d{2}:\d{2}:\d{2} (\+|\-)\d{4})\]\s+
+   \"GET (?P<url>.+?(?=\ http\/1.1")) http\/1.1"\s+
+   \d{3}\s+
+   \d+\s+
+   "-"\s+
+   (?P<http_user_agent>.+?(?=\ ))\s+
+   "-"\s+
+   "(?P<x_forwaded_for>(.+?))"\s+
+   "(?P<http_xb_user>(.+?))"\s+
+   (?P<request_time>[+-]?([0-9]*[.])?[0-9]+)
+   """,
+   re.IGNORECASE | re.VERBOSE)
+# lineformat = re.compile(r"""
+#    s+
+#    """,
+#    re.IGNORECASE | re.VERBOSE)
+
+class NGinxLogs:
+    """
+    Class to handle parsing of NGinx access/error files
+    """
+
+    def __init__(self):
+        """
+        Constructs all the necessary attributes for the person object.
+
+        Parameters
+        ----------
+            name : str
+                first name of the person
+            surname : str
+                family name of the person
+            age : int
+                age of the person
+        """
+
+        self.input_argument = None
 
 
-def usage():
-    print("Usage:  \n  nginxlogs2csv -i /var/log/nginx/access.log  \n  nginxlogs2csv -i /var/log/nginx/ \n  nginxlogs2csv -i /var/log/nginx/access.log > /tmp/access.log.csv")
+    def init_cli(self, opts, args):
 
 
-def parse_file(input_file):
-    print ('TODO.... [', input_file, ']')
+        # try:
+        #     # opts, args = getopt.getopt(sys.argv,"hi:o:",["input=","output="])
+        #     opts, args = getopt.getopt(argv,"hi:o:",["input=","output="])
+        #     # opts = getopt.getopt(sys.argv,"hi:o:",["input=","output="])
+        # except getopt.GetoptError:
+        #     self.usage
+        #     sys.exit(2)
+        print('teste', opts, args)
+        # print('argv', argv)
+        # print('opts', opts)
+        
+        for opt, arg in opts:
+            if opt == '-h' or opt == '--help':
+                self.usage
+                sys.exit()
+            elif opt in ("-i", "--input"):
+                self.input_argument = arg
 
-    if input_file.endswith(".gz"):
-        logfile = gzip.open(input_file)
-        lines = logfile.readlines()
-    else:
-        logfile = open(input_file)
-        lines = logfile.readlines()
-
-    # print(logfile)
-    # print(lines)
-
-    # for line in lines:
-    #     print(line)
-
-    for line in lines:
-        data = re.search(lineformat, line)
-        # data = re.search(lineformat, l.decode())
-
-        print(data)
-        if data:
-            datadict = data.groupdict()
-            ip = datadict["ipaddress"]
-            datetimestring = datadict["dateandtime"]
-            url = datadict["url"]
-            bytessent = datadict["bytessent"]
-            referrer = datadict["refferer"]
-            useragent = datadict["useragent"]
-            status = datadict["statuscode"]
-            method = data.group(6)
-
-            print (ip, \
-                datetimestring, \
-                url, \
-                bytessent, \
-                referrer, \
-                useragent, \
-                status, \
-                method)
-
-    # print(logfile)
-
-    logfile.close()
+        print('self.input_argument', self.input_argument)
 
 
-    # # # Using readlines() 
-    # try:
-    #     file1 = open(input_file, 'r') 
-    #     Lines = file1.readlines()
-    # except (OSError, IOError, FileNotFoundError) as e:
-    #     usage()
-    #     print(e)
-    #     sys.exit(2)
+        if os.path.isdir(self.input_argument):
+            for f in os.listdir(self.input_argument):
+                self.parse_file(f)
+        else:
+            self.parse_file(self.input_argument)
 
-    # file1 = open(input_file, 'r') 
-    # Lines = file1.readlines()
-    
-    # count = 0
-    # # Strips the newline character 
-    # for line in Lines: 
-    #     print("Line{}: {}".format(count, line.strip())) 
-
-def parse_input_argument(input_argument):
-    if os.path.isdir(input_argument):
-        for f in os.listdir(input_argument):
-            parse_file(f)
-    else:
-        parse_file(input_argument)
+        # self.parse_input_argument()
 
 
-def main(argv):
-   input_argument = ''
-   # outputfile = ''
-   try:
-        opts, args = getopt.getopt(argv,"hi:o:",["input=","output="])
-   except getopt.GetoptError:
-        usage
-        sys.exit(2)
-   for opt, arg in opts:
-        if opt == '-h' or opt == '--help':
-            usage
-            sys.exit()
-        elif opt in ("-i", "--input"):
-            input_argument = arg
+    def usage(self):
+        print('''Usage:
+  nginxlogs2csv -i /var/log/nginx/access.log
+  nginxlogs2csv -i /var/log/nginx/
+  nginxlogs2csv -i /var/log/nginx/access.log > /tmp/access.log.csv''')
 
-   # print ('The source file/directory is [', input_argument, ']')
 
-   parse_input_argument(input_argument)
+    def parse_file(self, input_file):
+        print ('TODO.... [', input_file, ']')
+
+        try:
+            if input_file.endswith(".gz"):
+                logfile = gzip.open(input_file)
+                lines = logfile.readlines()
+            else:
+                logfile = open(input_file)
+                lines = logfile.readlines()
+        except (OSError, UnboundLocalError):
+            print('cannot open', input_file)
+            return
+
+        for line in lines:
+            data = re.search(lineformat, line)
+            # data = re.search(lineformat, l.decode())
+
+            print(data)
+            if data:
+                datadict = data.groupdict()
+                ip = datadict["ipaddress"]
+                datetimestring = datadict["dateandtime"]
+                url = datadict["url"]
+                bytessent = datadict["bytessent"]
+                referrer = datadict["refferer"]
+                useragent = datadict["useragent"]
+                status = datadict["statuscode"]
+                method = data.group(6)
+
+                print (ip, \
+                    datetimestring, \
+                    url, \
+                    bytessent, \
+                    referrer, \
+                    useragent, \
+                    status, \
+                    method)
+            else:
+                print("Regex failed, file [", input_file, ']', 'line: [', line, ']', file=sys.stderr)
+
+        logfile.close()
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    exec = NGinxLogs()
+    print(sys.argv)
+    opts, args = getopt.getopt(sys.argv,"hi:o:",["input=","output="])
+    exec.init_cli(opts, args)
+    # exec.parse_input_argument()
+    #main(sys.argv[1:])
